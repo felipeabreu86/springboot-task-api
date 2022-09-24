@@ -9,8 +9,8 @@ import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 
-@Entity
 @Data
+@Entity
 public class Task {
 
     @Id
@@ -20,5 +20,9 @@ public class Task {
     @Column
     @NotNull(message = "{NotNull.Task.name}")
     private String name;
+
+    @Column
+    @NotNull(message = "{NotNull.Task.description}")
+    private String description;
 
 }
